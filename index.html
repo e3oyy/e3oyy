@@ -1,25 +1,140 @@
+<!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home Space</title>
 
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-wHtEo7iJ1c0H+Q0/zjrEe5/hh//5LwLe6bCCUb2VTOP//Mj6KtZ1do+I7cU6j9F66aJj6lQoOS3j5aBV1d3lTg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-
-    <style>
-        @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
-        body {
-            font-family: 'Montserrat', sans-serif;
-            margin: 0;
-            padding: 0;
-            background: url('image/background1.jpg') no-repeat center center fixed;
-            background-size: cover;
-            color: #333;
-        }
-    </style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-wHtEo7iJ1c0H+Q0/zjrEe5/hh//5LwLe6bCCUb2VTOP//Mj6KtZ1do+I7cU6j9F66aJj6lQoOS3j5aBV1d3lTg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="style.css">
 </head>
-<link rel="stylesheet" href="style.css">
+
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
+
+    body {
+        font-family: 'Montserrat', sans-serif;
+        margin: 0;
+        padding: 0;
+        background: url('image/background1.jpg') no-repeat center center fixed;
+        background-size: cover;
+        color: #333;
+    }
+
+    .container {
+        width: 90%;
+        max-width: 1200px;
+        margin: 30px auto;
+        background-color: rgba(255, 255, 255, 0.9);
+        padding: 20px;
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+        border-radius: 12px;
+    }
+
+    header {
+        text-align: center;
+        padding: 20px 0;
+        background-color: #000000;
+        color: rgb(255, 240, 25);
+        border-radius: 12px 12px 0 0;
+    }
+
+    nav {
+        display: flex;
+        justify-content: center;
+        background-color: #292a2c;
+        padding: 10px 0;
+        border-radius: 0 0 12px 12px;
+    }
+
+    nav a {
+        color: rgb(255, 240, 25);
+        text-decoration: none;
+        margin: 0 15px;
+        padding: 10px 20px;
+        border-radius: 25px;
+        transition: background-color 0.3s, transform 0.3s;
+        font-weight: 700;
+    }
+
+    nav a:hover {
+        background-color: #ffffff;
+        transform: scale(1.1);
+    }
+
+    main {
+        padding: 20px;
+    }
+
+    section {
+        margin-bottom: 20px;
+        text-align: center;
+    }
+
+    section h2 {
+        color: #322b2b;
+        padding-bottom: 10px;
+        margin-bottom: 20px;
+    }
+
+    .profile-picture img {
+            width: 200px;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 12px;
+            border: 5px solid #343a40;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        .profile-picture img:hover {
+            transform: scale(1.05);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+        }
+
+        .video-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 20px 0;
+        }
+        .video-container video {
+            width: 100%;
+            max-width: 600px;
+            border: 5px solid #343a40;
+            border-radius: 12px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+    .social-media {
+        display: flex;
+        justify-content: center;
+    }
+
+    .social-media ul {
+        list-style: none;
+        padding: 0;
+        display: flex;
+        gap: 10px;
+    }
+
+    .social-media a {
+        color: #322b2b;
+        text-decoration: none;
+        margin: 0 10px;
+        font-size: 2em;
+        transition: color 0.3s, transform 0.3s;
+    }
+
+    .social-media a:hover {
+        color: #007bff;
+        transform: scale(1.2);
+    }
+</style>
+
 <body>
     <div class="container">
         <header>
@@ -43,12 +158,13 @@
             </section>
             <section id="home">
                 <h2>Best Moment</h2>
-            <div class="video-container">
-                <video controls>
-                    <source src="video/vid4.mp4" type="video/mp4">
-                    Your browser does not support the video tag.
-                </video>
-            </div>
+                <div class="video-container">
+                    <video controls>
+                        <source src="video/vid4.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                </div>
+            </section>
             <section id="audio">
                 <h2>Listen to My Favorite Song</h2>
                 <audio controls>
@@ -60,12 +176,13 @@
         <div class="social-media">
             <h2 style="text-align: center;"> Follow Me on Social Media </h2>
             <ul style="text-align: center;">
-                <a href="https://www.facebook.com/hariszafriazml/" target="_blank"><i class="fa-brands fa-facebook"></i></a>
-                <a href="https://www.tiktok.com/@pl4yrist?lang=en" target="_blank"><i class="fa-brands fa-tiktok"></i></a>
-                <a href="https://www.instagram.com/hrszfrl/" target="_blank"><i class="fa-brands fa-instagram"></i></a>
-                <!-- Add more social media links as needed -->
+                <li><a href="https://www.facebook.com/hariszafriazml/" target="_blank"><i class="fab fa-facebook"></i></a></li>
+                <li><a href="https://www.tiktok.com/@pl4yrist?lang=en" target="_blank"><i class="fab fa-tiktok"></i></a></li>
+                <li><a href="https://www.instagram.com/hrszfrl/" target="_blank"><i class="fab fa-instagram"></i></a></li>
             </ul>
         </div>
     </div>
 </body>
+
 </html>
+
