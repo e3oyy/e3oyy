@@ -19,13 +19,30 @@
         background-size: cover;
         color: #333;
     }
+    .social-media {
+        display: flex;
+        justify-content: center;
+    }
+
+    .social-media ul {
+        list-style: none;
+        padding: 0;
+        display: flex;
+        gap: 10px;
+    }
+
     .social-media a {
-    color: #322b2b;
-    text-decoration: none;
-    margin: 0 10px;
-    font-size: 2em;
-    transition: color 0.3s, transform 0.3s;
-}
+        color: #322b2b;
+        text-decoration: none;
+        margin: 0 10px;
+        font-size: 2em;
+        transition: color 0.3s, transform 0.3s;
+    }
+
+    .social-media a:hover {
+        color: #007bff;
+        transform: scale(1.2);
+    }
 </style>
 <body>
     <div class="container">
